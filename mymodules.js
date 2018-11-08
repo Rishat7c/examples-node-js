@@ -14,4 +14,6 @@ var value = 6;
 // console.log(arResult([0, 7, 14, 21, 28, 35]));
 
 // Export
-module.exports = arResult, value;
+module.exports.arResult = arResult;
+module.exports.multiply = multiply;
+module.exports.value = value;
