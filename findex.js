@@ -13,3 +13,11 @@ var printSomething = function() {
 
 // Калирование функции
 printSomething();
+
+// Функция
+function call(func) {
+    func();
+}
+
+// Каллирование функции с параметрами
+call(sayHey);
