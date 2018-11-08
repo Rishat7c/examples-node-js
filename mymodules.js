@@ -5,7 +5,7 @@ var arResult = function (array) {
 
 // Param
 var multiply = function (x, y) {
-  return `$(x) умножить $(y) равно $(x * y)`;
+  return `${x} умножить ${y} равно ${x * y}`;
 }
 
 
