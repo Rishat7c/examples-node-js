@@ -10,3 +10,8 @@ if(x == 0)
 // Циклы
 for(var i = 0; i < 5; i++)
   console.log(i);
+
+// Таймеры
+setTimeout(function() {
+    console.log("Hey, dude. Its 2000ml timer");
+}, 2000);
