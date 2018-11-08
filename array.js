@@ -1,6 +1,6 @@
 // Array
 var arResult = function (array) {
-    return "В массиве находится " + array.length + " элемента"
+    return "В массиве находится " + array.length + " элементов"
 };
 
 // Print
