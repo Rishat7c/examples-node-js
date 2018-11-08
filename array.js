@@ -1,4 +1,4 @@
-// Array
+// Func
 var arResult = function (array) {
     return "В массиве находится " + array.length + " элементов"
 };
