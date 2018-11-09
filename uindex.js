@@ -23,4 +23,6 @@ cars.forEach(function(car) {
 });
 
 // Call Objects
-bmw.emit("speed", "254.5");
+ford.emit("speed", "200");
+bmw.emit("speed", "205");
+audi.emit("speed", "190");
