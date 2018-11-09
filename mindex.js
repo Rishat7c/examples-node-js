@@ -5,4 +5,12 @@
 
 var events = require('events');
 
-var myEmit;
+var myEmit = new events.EventEmitter();
+
+// Create hundler
+myEmit.on("jump", function (text) {
+    console.log(text);
+});
+
+// Call hundler
+myEmit.emit("jump", "Hi, Rishat");
