@@ -5,6 +5,7 @@
 
 var events = require('events');
 
+// Initial module
 var myEmit = new events.EventEmitter();
 
 // Create hundler
