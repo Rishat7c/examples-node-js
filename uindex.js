@@ -7,9 +7,20 @@ var Cars = function(model) {
 };
 
 //
-util.inherit(Cars, events.EventEmitter);
+util.inherits(Cars, events.EventEmitter);
 
 // Objects
-var bmw = new Cars("ford");
+var ford = new Cars("ford");
 var bmw = new Cars("bmw");
-var bmw = new Cars("audio");
+var audi = new Cars("audi");
+
+// Circle
+var cars = [ford, bmw, audi];
+cars.forEach(function(car) {
+    car.on('speed', function(text) {
+      console.log(`${car.model} speed is - ${text}`);
+    });
+});
+
+// Call Objects
+bmw.emit("speed", "254.5");
