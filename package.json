@@ -1,0 +1,27 @@
+{
+  "name": "example-node",
+  "version": "1.0.0",
+  "description": "example app",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rishat7c/examples-node-js.git"
+  },
+  "keywords": [
+    "example",
+    "app"
+  ],
+  "author": "Rishat7c",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rishat7c/examples-node-js/issues"
+  },
+  "homepage": "https://github.com/Rishat7c/examples-node-js#readme"
+}
