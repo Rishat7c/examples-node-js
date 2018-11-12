@@ -9,21 +9,22 @@ var fs = require('fs');
 var http = require('http');
 
 var server = http.createServer(function(req, res) {
-    if(req.url != "/favicon.ico")
-        console.log(req.url);
-
-    // res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
-    res.writeHead(200, {'Content-Type': 'application/json; charset=utf-8'});
-    // Чтение потока & файл
-    // var myReadShort = fs.createReadStream('./pages/index.html', 'utf8');
-    // myReadShort.pipe(res);
-    var obj = {
-        model: 'ford',
-        speed: '190',
-        color: 'blue'
+    if(req.url != "/favicon.ico") {
+        // console.log(req.url);
+        if(req.url === '/index' || req.url === '/') {
+            res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8;'});
+            fs.createReadStream('./pages/index.html').pipe(res);
+        } else if(req.url === '/about') {
+            res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8;'});
+            fs.createReadStream('./pages/about.html').pipe(res);
+        } else if(req.url === '/contact') {
+            res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8;'});
+            fs.createReadStream('./pages/contact.html').pipe(res);
+        } else {
+            res.writeHead(404, {'Content-Type': 'text/html; charset=utf-8;'});
+            fs.createReadStream('./pages/404.html').pipe(res);
+        }
     }
-    res.end(JSON.stringify(obj));
-
 });
 
 server.listen(3000, 'localhost');
