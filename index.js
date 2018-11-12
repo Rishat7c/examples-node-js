@@ -1,17 +1,16 @@
-console.log("Hi, Rishat!");
-console.log(__dirname); // <-- global const
-console.log(__filename); // <-- global const
+var express = require('express');
+var app = express();
 
-// Переменные
-var x = 0;
-if(x == 0)
-  console.log(true);
+app.get('/', function(req, res) {
+    res.send('This is home');
+});
 
-// Циклы
-for(var i = 0; i < 5; i++)
-  console.log(i);
+app.get('/contact', function(req, res) {
+    res.send('hello');
+});
 
-// Таймеры
-setTimeout(function() {
-    console.log("Hey, dude. Its 2000ml timer");
-}, 2000);
+app.get('/contact/:name/:id', function(req, res) {
+    res.send(`name = ${req.params.name}, id = ${req.params.id}`);
+});
+
+app.listen(3000)
