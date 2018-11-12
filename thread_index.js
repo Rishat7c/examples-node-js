@@ -12,9 +12,9 @@ var server = http.createServer(function(req, res) {
     if(req.url != "/favicon.ico")
         console.log(req.url);
 
-    res.writeHead(200, {'Content-Type': 'text/plain; charset=utf-8'});
+    res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
     // Чтение потока & файл
-    var myReadShort = fs.createReadStream('./text.txt', 'utf8');
+    var myReadShort = fs.createReadStream('./pages/index.html', 'utf8');
     myReadShort.pipe(res);
 
 });
