@@ -13,5 +13,10 @@
 <body>
     <h1>News page | <%= newsId %></h1>
     <h1><%= obj.title %></h1>
+    <ul>
+        <% obj.paragraph.forEach(function(item) { %>
+            <li> <%= item %> </li>
+        <% }); %>
+    </ul>
 </body>
 </html>
