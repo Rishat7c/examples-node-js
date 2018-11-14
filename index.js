@@ -22,12 +22,13 @@ app.post('/about', urlencodedParser, function(req, res) {
     res.render('about-succes', {data: req.body});
 });
 
-app.get('/news/:id/:name', function(req, res) {
+app.get('/news/:id', function(req, res) {
     var obj = {
         id: 0,
         title: 'Новость',
         paragraph: ['Ford', 'Bmw', 'Audi', 'Vaz']
     };
+    console.log(req.query)
     res.render('news', {newsId: req.params.id, obj: obj});
 });
 
