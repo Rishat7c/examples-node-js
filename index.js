@@ -7,8 +7,8 @@ app.get('/', function(req, res) {
     res.sendFile(__dirname + '/pages/index.html');
 });
 
-app.get('/contact', function(req, res) {
-    res.sendFile(__dirname + '/pages/contact.html');
+app.get('/about', function(req, res) {
+    res.render('about');
 });
 
 app.get('/news/:id/:name', function(req, res) {
