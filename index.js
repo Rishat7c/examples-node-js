@@ -3,12 +3,14 @@ var app = express();
 
 app.set('view engine', 'ejs');
 
+app.use('/public', express.static('public'));
+
 app.get('/', function(req, res) {
-    res.sendFile(__dirname + '/pages/index.html');
+    res.render('index');
 });
 
-app.get('/contact', function(req, res) {
-    res.sendFile(__dirname + '/pages/contact.html');
+app.get('/about', function(req, res) {
+    res.render('about');
 });
 
 app.get('/news/:id/:name', function(req, res) {
