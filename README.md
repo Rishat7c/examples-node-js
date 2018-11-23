@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.com/Rishat7c/examples-node-js.svg?branch=master)](https://travis-ci.com/Rishat7c/examples-node-js)
