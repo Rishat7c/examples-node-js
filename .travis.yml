@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "iojs"
+  - "7"
+github_token: $GITHUB_TOKEN
+script: npm run prod
+deploy: 
+  provider: pages
+  skip_cleanup: true
